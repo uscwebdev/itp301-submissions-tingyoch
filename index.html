@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tingyo Chang // Student Page</title>
+
+	<style>
+		body {
+			width: 1230 px;
+		}
+
+		#heading {
+			text-align: center;
+		}
+
+		#color-btn {
+			text-align: center;
+			margin: 0 auto;
+			border-radius:25%;
+		}
+
+		#column-1 {
+			width: 600px;
+			background-color:plum;
+			float:left;
+			padding:10px;
+			margin:5px;
+			border-radius: 25%;
+		}
+
+		#column-2 {
+			width:600px;
+			background-color:yellowgreen;
+			float: left;
+			padding: 10px;
+			margin: 5px;
+			border-radius: 25%;
+		}
+
+		#columns {
+			margin: 0 auto;
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<div id="heading">
+		<h1>Tingyo Chang</h1>
+		<p><a href="mailto:tingyoch@usc.edu">tingyoch@usc.edu</a></p>
+		<button id="color-btn">Favorite color!
+	</button>
+	</div>
+
+<div id="columns">
+	<div id="column-1">
+		<h2>Assignments</h2>
+	</div>
+
+	<div id="column-2">
+		<h2>Labs</h2>
+			<ul>
+				<li><a href="index.html" target="_blank">Lab 01: Student Page</a></li>
+			</ul>
+	</div>
+</div>
+
+<script>
+	document.querySelector('#color-btn').onclick=function(){
+		document.querySelector("body").style.backgroundColor="cornflowerblue"
+	}
+
+</script>
+
+	</body>
+	</html>
