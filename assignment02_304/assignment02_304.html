@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tingyo Chang //Assignment 02: Shopping Cart</title>
+
+	<style> 
+		@font-face {
+			font-family: "Permanent Marker";
+			src: url("Permanent_Marker/PermanentMarker-Regular.ttf");
+		}
+
+		#header {
+			text-align: center;
+			margin: 0 auto;
+			background-color: #97cba9;
+		}
+
+		h1 {
+			font-family: Permanent Marker;
+			font-size: 4em;
+			color: #feffdf;
+			margin: 0px;
+		}
+
+		h3 {
+			font-family: Permanent Marker;
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		h4 {
+			font-family: Permanent Marker;
+			font-size: 2em;
+			text-align: center;
+			margin: 0 auto;
+			color: #668ba4;
+		}
+
+		h2 {
+			font-family: Permanent Marker;
+			display: inline;
+		}
+
+		.puffle > h2{
+			color: #989898;
+			display: inline;
+		}
+
+
+		.price {
+			display: inline;
+			width: 100px;
+			font-family: "Permanent Marker";
+			font-size: 2em;
+		}
+
+
+		#content {
+			width: 1000px;
+			float: left;
+			background: #feffdf;
+			height: 725px;
+		}
+
+		#cart-content {
+			width: 500px;
+			height: 725px;
+			background: #dde0ab;
+			float:left;
+		}
+
+		#cart-text{
+			width: 500px;
+			margin: 0 auto;
+			text-align: center;
+			position: sticky;
+			top: 50%;
+		}
+
+		.img-container {
+			height: 200px;
+			width: 200px;
+			text-align: center;
+			overflow: hidden;
+		}
+
+		.pic-size {
+			height: 200px;
+			width: auto;
+		}
+
+		.puffle {
+			width: 200px;
+			float: left;
+			margin: 50px;
+		}
+
+		.puffle:hover {
+			color: #668ba4;
+		}
+
+		.puffle-details {
+			width: 200px;
+		}
+
+
+		#footer {
+			text-align: center;
+			margin: 0 auto;
+			clear: both;
+			background-color: #97cba9;
+		} 
+
+
+		#cart > h2 {
+			color: #97cba9;
+			font-size: 2em;
+		}
+
+
+	</style>
+
+
+	</head>
+<body>
+
+<div id="header"><h1>Puffle for Sale</h1></div>
+
+
+<div id="content">
+
+
+<div class="puffle" id="blue">
+	<div class="img-container">
+	<img class="pic-size" src="assignment02_304p/bluepuffle.png" alt="Blue Puffle"> </div>
+	<div class="puffle-details"><h3>Blue Puffle</h3>
+	<h2>$</h2><div class="price">25</div></div>
+</div> 
+
+<div class="puffle" id="brown">
+	<div class="img-container">
+	<img class="pic-size" src="assignment02_304p/brownpuffle.png" alt="Brown Puffle"> </div>
+	<div class="puffle-details"><h3>Brown Puffle</h3>
+	<h2>$</h2><div class="price">15</div></div>
+</div>
+
+<div class="puffle" id="green">
+	<div class="img-container">
+	<img class="pic-size" src="assignment02_304p/greenpuffle.png" alt="Green Puffle"> </div>
+	<div class="puffle-details"><h3>Green Puffle</h3>
+	<h2>$</h2><div class="price">20</div></div>
+</div>
+
+<div class="puffle" id="pink">
+	<div class="img-container">
+	<img class="pic-size" src="assignment02_304p/pinkpuffle.png" alt="Pink Puffle"> </div>
+	<div class="puffle-details"><h3>Pink Puffle</h3>
+	<h2>$</h2><div class="price">40</div></div>
+</div>
+
+<div class="puffle" id="purple">
+	<div class="img-container">
+	<img class="pic-size" src="assignment02_304p/purplepuffle.png" alt="Purple Puffle"> </div>
+	<div class="puffle-details"><h3>Purple Puffle</h3>
+	<h2>$</h2><div class="price">30</div></div>
+</div>
+
+<div class="puffle" id="red">
+	<div class="img-container">
+	<img class="pic-size" src="assignment02_304p/redpuffle.png" alt="Red Puffle"> </div>
+	<div class="puffle-details"><h3>Red Puffle</h3>
+	<h2>$</h2><div class="price">35</div></div>
+</div>
+
+</div>
+
+<!--      <h2>$<div class="price">35</div></h2>         -->
+
+<div id="cart-content">
+	<div id="cart-text"><h2>Cart</h2>
+
+	<h3>Subtotal: <span id="total-price">$0</span></h3></div>
+</div>
+
+
+<div id="footer"><h4>Puffle Inc.</h4></div>
+
+
+
+<script>
+
+	
+/**testing**/
+console.log(document.querySelector('#blue'));
+
+document.querySelector('#blue').onclick = function(){
+	console.log('Puffle selected!');
+}
+
+console.log(document.querySelector('#brown'));
+
+document.querySelector('#brown').onclick = function(){
+	console.log('Puffle selected!');
+}
+
+console.log(document.querySelector('#green'));
+
+document.querySelector('#green').onclick = function(){
+	console.log('Puffle selected!');
+}
+
+console.log(document.querySelector('#pink'));
+
+document.querySelector('#pink').onclick = function(){
+	console.log('Puffle selected!');
+}
+
+console.log(document.querySelector('#purple'));
+
+document.querySelector('#purple').onclick = function(){
+	console.log('Puffle selected!');
+}
+
+console.log(document.querySelector('#red'));
+
+document.querySelector('#red').onclick = function(){
+	console.log('Puffle selected!');
+}
+/**testing end**/
+
+
+/**Global Variable**/
+var totalPrice = 0
+
+
+/** price additions **/
+document.querySelector('#blue').onclick=function(){
+	console.log('.price');
+
+	var bluePrice = document.querySelector('.price').innerHTML;
+
+	bluePrice = parseInt(bluePrice);
+
+	totalPrice += bluePrice;
+
+	console.log(totalPrice);
+
+	document.querySelector('#total-price').innerHTML = '$' + totalPrice
+}
+
+document.querySelector('#brown').onclick=function(){
+	console.log('#brown .price');
+
+	var brownPrice = document.querySelector('#brown .price').innerHTML;
+
+	brownPrice = parseInt(brownPrice);
+
+	totalPrice += brownPrice;
+
+	console.log(totalPrice);
+
+	document.querySelector('#total-price').innerHTML = '$' + totalPrice
+}
+
+document.querySelector('#green').onclick=function(){
+	console.log('#green .price');
+
+	var greenPrice = document.querySelector('#green .price').innerHTML;
+
+	greenPrice = parseInt(greenPrice);
+
+	totalPrice += greenPrice;
+
+	console.log(totalPrice);
+
+	document.querySelector('#total-price').innerHTML = '$' + totalPrice
+}
+
+document.querySelector('#pink').onclick=function(){
+	console.log('#pink .price');
+
+	var pinkPrice = document.querySelector('#pink .price').innerHTML;
+
+	pinkPrice = parseInt(pinkPrice);
+
+	totalPrice += pinkPrice;
+
+	console.log(totalPrice);
+
+	document.querySelector('#total-price').innerHTML = '$' + totalPrice
+}
+
+document.querySelector('#purple').onclick=function(){
+	console.log('#purple .price');
+
+	var purplePrice = document.querySelector('#purple .price').innerHTML;
+
+	purplePrice = parseInt(purplePrice);
+
+	totalPrice += purplePrice;
+
+	console.log(totalPrice);
+
+	document.querySelector('#total-price').innerHTML = '$' + totalPrice
+}
+
+document.querySelector('#red').onclick=function(){
+	console.log('#red .price');
+
+	var redPrice = document.querySelector('#red .price').innerHTML;
+
+	redPrice = parseInt(redPrice);
+
+	totalPrice += redPrice;
+
+	console.log(totalPrice);
+
+	document.querySelector('#total-price').innerHTML = '$' + totalPrice
+}
+
+
+
+/** WORK FLOW 
+ 1. detect user click on puffle (separate by puffle color)
+ 2. save displayed price as a varaible (colorPrice)
+ 3. convert string variable into an interger (parseInt)
+ 4. redfine total Price as addition between totalPrice (originally set to 0 or whatever previous function has been performed) with colorPrice
+ 5. display new totalPrice (#total-price) in span tag 
+ **/
+
+	</script>
+
+
+
+
+</body>
+
+</html>
