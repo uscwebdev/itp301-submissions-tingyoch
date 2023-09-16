@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tingyo Chang // Lab 04: Updated Photo Gallery</title>
+
+<style>
+
+	@font-face {
+	font-family: "Reach Story";
+	src: url("reach_story/Reach Story.ttf");
+	}
+
+	.width-100 {
+		width: 200px;
+		height: auto;
+		float: left;
+		margin: 10px;
+	}
+
+	#main-image {
+		width:1000px;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	#main-image-container {
+		width: 1000px;
+		height: auto;
+		margin: 0 auto;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	#photo-slides {
+		width: 1100px;
+		height: 133px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+
+	h1 {
+		text-align: center;
+		font-family: "Reach Story";
+		font-size: 4em;
+		color: #BB8FCE;
+	}
+
+	h3 {
+		text-align: center;
+		font-family: "Reach Story";
+		font-size: 3em;
+		color: #BB8FCE;
+	}
+
+	</style>
+	
+</head>
+
+<body>
+
+	<div id="heading">
+	<h1>Tingyo's Friends and Family</h1>
+	</div>
+
+<div id="photo-slides">
+	<img id="img1" class="width-100 thumbnail" src="itp301lab04p/terri.jpg" alt="Me and Terri">
+
+	<img id="img2" class="width-100 thumbnail" src="itp301lab04p/IMG-5724.JPG" alt="Me and Olivia">
+
+	<img id="img3" class="width-100 thumbnail" src="itp301lab04p/IMG-5853.JPG" alt="Zhu's B-Day">
+
+	<img id="img4" class="width-100 thumbnail" src="itp301lab04p/IMG-8111.JPG" alt="Christmas Party">
+
+	<img id="img5" class="width-100 thumbnail" src="itp301lab04p/lasttutorial.jpg" alt="Last Tutorial">
+
+</div>
+
+<div id="main-image-container">
+	<img id="main-image" src="itp301lab04p/terri.jpg" alt="Me and Terri">
+</div>
+
+
+	<h3 id="one-caption" class="caption">Me and Terri</h3>
+
+
+<!--<div id="basic-slider">
+	<div class="flexslider">
+	<ul class="slides">
+		<li>
+			<img class="width-100" src="itp301assignment01p/terri.jpg" alt="Me and Terri">
+		</li>
+		<li>
+			<img class="width-100" src="itp301assignment01p/IMG-5724.JPG" alt="Me and Olivia">
+		</li>
+		<li>
+			<img class="width-100" src="itp301assignment01p/IMG-5853.JPG" alt="Zhu's B-Day">
+		</li>
+		<li>
+			<img class="width-100" src="itp301assignment01p/IMG-8111.JPG" alt="Christmas Party">
+		</li>
+		<li>
+			<img class="width-100" src="itp301assignment01p/lasttutorial.jpg" alt="Last Tutorial">
+	</ul>
+	</div>
+</div> -->
+
+<script>
+
+var thumbnails = document.querySelectorAll('.thumbnail'); 
+
+	console.log(thumbnails);
+
+
+	var changeImage = function(newSrc,newAlt) {
+			document.querySelector('#main-image').src=newSrc;
+			document.querySelector('#main-image').alt = newAlt;
+			document.querySelector('#one-caption').innerHTML = newAlt;
+		}
+
+
+//Create loop for displaying thumbnails with caption as the main-image
+	for (i=0; i < thumbnails.length; i++) {
+
+		thumbnails[i].onclick = function (){
+			changeImage(this.src, this.alt);
+			}
+		}  
+
+
+//create reusable function
+/**
+	var changeImage = function(newSrc, newAlt){
+		document.querySelector('#main-image').src=newSrc;
+		document.querySelector('#main-image').alt = newAlt;	
+	}
+
+//invoke function for each image. 
+	document.querySelector('#img1').onclick=function(){
+		changeImage('itp301lab04p/terri.jpg', 'Me and Terri');
+	}
+
+	document.querySelector('#img2').onclick=function(){
+		changeImage('itp301lab04p/IMG-5724.JPG', 'Me and Olivia');
+	}
+
+	document.querySelector('#img3').onclick=function(){
+		changeImage('itp301lab04p/IMG-5853.JPG', "Zhu's Bday");
+	}
+
+	document.querySelector('#img4').onclick=function(){
+		changeImage('itp301lab04p/IMG-8111.JPG', 'Christmas Party');
+	}
+
+	document.querySelector('#img5').onclick=function(){
+		changeImage('itp301lab04p/lasttutorial.jpg', 'Last Tutorial');
+	}
+**/
+
+
+	</script>
+
+
+	</body>
+
+	</html>
