@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title>Tingyo Chang // Assignment 04: Liar's Dice</title>
+
+<style>
+
+	@font-face {
+	font-family: "Major Mono Display";
+	src: url("Major_Mono_Display/MajorMonoDisplay-Regular.ttf");
+	}
+
+	@font-face {
+		font-family: "Roboto Mono";
+		src: url("Roboto_Mono/static/RobotoMono-Regular.ttf");
+	}
+
+	h1 {
+		font-family: "Major Mono Display";
+		font-size: 4em;
+	}
+
+	h2 {
+		font-family: "Roboto Mono";
+	}
+
+	button {
+		font-family: "Roboto Mono";
+		font-size: 30px;
+	}
+
+	input {
+		height: 30px;
+	}
+
+	#header {
+		text-align: center;
+	}
+
+	#main-content {
+		text-align: center;
+		margin: 0 auto;
+		width: 1500px;
+	}
+
+	.dice-box {
+		width: 270px;
+		height: auto;
+		display: inline-block;
+	}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header">
+	<h1>Liar's Dice</h1>
+</div>
+
+<div id="main-content">
+	<!--submission and submission button-->
+	<input type="text" id="number-guess" required><button id="guess-btn">GUESS</button>
+
+	<!--"Result" display-->
+	<div id="result">
+		<h2>Result:</h2>
+	</div>
+
+	<!--dice display--> 
+	<div id="dice-display">
+		<div class="dice-box">
+			<img src="dice_images/1.png" alt="1">
+		</div>
+		<div class="dice-box">
+			<img src="dice_images/1.png" alt="1">
+		</div>
+		<div class="dice-box">
+			<img src="dice_images/1.png" alt="1">
+		</div>
+		<div class="dice-box">
+			<img src="dice_images/1.png" alt="1">
+		</div>
+		<div class="dice-box">
+			<img src="dice_images/1.png" alt="1">
+		</div>
+
+	</div> <!--end of dice display-->
+</div> <!-- end of main-content div --> 
+
+
+<script>
+	
+//Loops through 'numbers' and 'images' and change images. store user guess in var=guessedNum	
+	document.querySelector('#guess-btn').onclick = function(){
+		//store user guess in var = guessedNum
+		var guessedNum = document.querySelector('#number-guess').value; 
+		guessedNum = parseInt(guessedNum);
+		console.log(guessedNum);
+
+		//create an empty array 'numbers' 
+		var numbers = []; 
+
+		//loop through 'numbers' array and populate with random intergers (5)
+		for (i=0; i < 5; i++) {
+			numbers.push(Math.floor( Math.random() * 6 + 1));
+			console.log(numbers);
+		}
+
+		//create 'images' array to store dice images 
+		var images = document.querySelectorAll('img'); 
+		console.log(images);
+
+		//store reusable function changeImage
+		var changeImage = function(newSrc, newAlt){
+			images[i].src = newSrc; 
+			images[i].alt = newAlt; 
+		}
+
+		for (var i=0; i<images.length; i++) {
+			changeImage ('dice_images/' + numbers[i] + '.png' , numbers[i]);
+		}
+
+		//display error/success message 
+
+		//create boolean 
+		var isGuessed = false; 
+
+
+		for (var i=0; i < numbers.length; i++) {
+			if (numbers[i] === guessedNum) {
+				isGuessed = true;
+			}
+		}
+
+		if (isGuessed) {
+			document.querySelector('h2').innerHTML = "Result: Hooray! You guessed it!";
+			document.querySelector('h2').style.color = 'green';
+		} else {
+			document.querySelector('h2').innerHTML = "Result: Boo. Wrong. Try again.";
+			document.querySelector('h2').style.color = 'red';
+		}
+
+	}
+
+</script>
+	</body>
+</html>
