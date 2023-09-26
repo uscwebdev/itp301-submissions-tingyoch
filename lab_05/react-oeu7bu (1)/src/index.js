@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import '/index.css';
+import './index.css';
 
 const root = createRoot(document.querySelector('#root'));
 
@@ -14,7 +14,7 @@ root.render(
     </div>
 
     <div className="columns">
-      <button id="color-btn" onclick="cornflowerblue">
+      <button id="color-btn" onClick={'cornflowerblue'}>
         Favorite Color!
       </button>
 
@@ -27,7 +27,6 @@ root.render(
         alt="Swimming!"
       />
     </div>
-
     <div className="columns">
       <h3>Fall 2023 Classes</h3>
       <ul>
