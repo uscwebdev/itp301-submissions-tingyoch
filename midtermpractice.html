@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Midterm Review</title>
+</head>
+<body>
+<!-- 2.5  -->
+<div>
+	Big Div
+	<div id="small">
+		Small Div
+	</div>
+</div>
+<!-- 2.2  -->
+<!-- <button>Example Text</button> -->
+
+<!-- 2.1 -->
+<!-- <div id="images">
+	<img src="..." alt="...">
+	<img src="..." alt="...">
+	<img src="..." alt="...">
+</div> -->
+
+<!-- <button>Click Here</button>
+<div id="number">10</div>
+ -->
+<script>
+// 2.5
+var parentDiv = document.querySelector('div'); 
+var smallDiv = document.querySelector('#small');
+var ogColor = smallDiv.style.getComputedStyle;
+
+parentDiv.style.backgroundColor = 'yellow';
+smallDiv.style.backgroundColor = 'ogColor';
+
+
+// var bigDiv = parentDiv.querySelector('div');
+// bigDiv.style.backgroundColor = 'yellow';
+
+
+// 2.4 
+// function isValidUser (username){
+// 	const validUsername = ['ttrojan', 'traveler', 'webDeveloper'];
+// 	return validUsername.includes(username);
+// }
+
+// 2.2 
+// document.querySelector('button').onclick = function (){
+// 	console.log(document.querySelector('button').textContent);
+// };
+
+// 2.1
+	// var myImages = document.querySelectorAll('#images');
+
+	// myImages.splice(0,1,'ttrojan.jpg');
+
+
+	// document.querySelector('button').onclick = function (){
+	// 	var currentNumber = document.querySelector('#number').innerHTML;
+	// 	currentNumber = parseInt(currentNumber);
+	// 	currentNumber = currentNumber - 1; 
+	// 	document.querySelector('#number').innerHTML = currentNumber;
+	// 	console.log(currentNumber);
+	// }
+
+	// var myArray = [1, 2, 3];
+
+	// console.log (myArray [myArray.length - 1]);
+</script>
+	</body>
+	</html>
