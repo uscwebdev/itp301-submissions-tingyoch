@@ -1,0 +1,40 @@
+/* CONTACT ME  */
+#contact-section-full {
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-box {
+  margin: 30px 0;
+  display: inline-block;
+  align-items: center;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+input[type='text'] {
+  width: 350px;
+  margin-left: 10px;
+}
+
+#comment-section > h4 {
+  margin-top: 0px;
+}
+
+small {
+  float: right;
+}
+
+textarea {
+  width: 350px;
+  height: 150px;
+  margin-left: 10px;
+}

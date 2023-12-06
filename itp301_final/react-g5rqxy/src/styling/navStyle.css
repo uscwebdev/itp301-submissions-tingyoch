@@ -1,0 +1,44 @@
+/* NAVBAR  */
+.nav-bar-full {
+  height: 85px;
+  padding: 15px;
+  background-color: white;
+  position: sticky;
+  top: 0px;
+  border-style: solid;
+}
+
+.nav-black {
+  height: 30px;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+a {
+  padding: 10px;
+}
+
+.nav-left {
+  float: left;
+}
+
+.nav-right {
+  float: right;
+}
+
+.nav-font-black {
+  color: black;
+}
+
+#nav-brand {
+  color: black;
+}

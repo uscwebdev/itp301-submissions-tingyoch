@@ -1,0 +1,26 @@
+/* ABOUT */
+.content-box {
+  width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-pic {
+  width: 270px;
+  padding-right: 50px;
+  height: auto;
+  float: left;
+  overflow: hidden;
+}
+
+#about-txt {
+  width: 400px;
+  padding-left: 50px;
+  float: left;
+}

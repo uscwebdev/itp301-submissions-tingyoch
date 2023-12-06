@@ -1,0 +1,58 @@
+/* GLOBAL */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+h3 {
+  text-align: center;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* CREATIVE/ANALYTIC */
+.section-full {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.sub-section-container {
+  width: calc(30% - 20px);
+  display: inline-block;
+  text-align: justify;
+  margin: 0 10px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.pdf-photo {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.sub-section-container > img {
+  margin: 0 auto;
+  text-align: center;
+  width: 250px;
+  height: 410px;
+}
+
+/* LIKE BUTTON */
+#likes-pic {
+  height: 30px;
+  width: auto;
+}
+
+.likes {
+  margin: 0 auto;
+  text-align: center;
+}
